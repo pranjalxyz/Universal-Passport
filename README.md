@@ -1,20 +1,98 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# Midnight Privacy Passport Architect 🛡️
 
-# Run and deploy your AI Studio app
+A technical demonstration of a **Zero-Knowledge Identity System** built for the **Midnight Network**. This application simulates the "Universal Privacy Passport" architecture, utilizing the **Compact (Minokawa)** smart contract language to demonstrate how users can prove eligibility (e.g., Age > 18) without revealing sensitive personal data.
 
-This contains everything you need to run your app locally.
+## 🌟 Features
 
-View your app in AI Studio: https://ai.studio/apps/drive/1c7LnOtlbpZ3QWdbV-10f-nv4OxJlRpsH
+*   **Hardened ZK Simulation**: Simulates local witness generation, cryptographic signatures, and Nullifier computation.
+*   **Smart Contract Inspector**: View and analyze the actual `passport.compact` circuit code.
+*   **Witness Provider Logic**: Explore the TypeScript implementation of the client-side secret vault (`PrivateState`).
+*   **Architecture Diagram**: Visual breakdown of the Trusted Issuer -> Witness -> Midnight Ledger flow.
+*   **AI Architect**: Integrated **Gemini 3 Pro** assistant to explain technical concepts in real-time.
 
-## Run Locally
+## 🛠️ Tech Stack
 
-**Prerequisites:**  Node.js
+*   **Frontend**: React 19, TypeScript, Tailwind CSS
+*   **Blockchain Simulation**: Midnight Network (Compact Language)
+*   **AI Integration**: Google GenAI SDK (Gemini 1.5/2.5/3 models)
+*   **Icons**: Lucide React
 
+---
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+## 🚀 Local Setup Guide
+
+Follow these instructions to run the project locally on your machine.
+
+### Prerequisites
+
+*   **Node.js**: v18.0.0 or higher
+*   **npm** or **yarn**
+*   **Google Gemini API Key**: Required for the AI Architect chat feature. [Get an API Key here](https://aistudio.google.com/app/apikey).
+
+### Installation
+
+1.  **Clone the repository**
+    ```bash
+    git clone https://github.com/your-username/midnight-passport-architect.git
+    cd midnight-passport-architect
+    ```
+
+2.  **Install dependencies**
+    ```bash
+    npm install
+    # or
+    yarn install
+    ```
+
+3.  **Environment Configuration**
+    Create a `.env` file in the root directory to store your API key.
+
+    ```bash
+    touch .env
+    ```
+
+    Open `.env` and add your key:
+    ```env
+    # Google Gemini API Key for the AI Architect Assistant
+    # Get yours at: https://aistudio.google.com/app/apikey
+    API_KEY=your_actual_api_key_here
+    ```
+
+    *Note: The application uses `process.env.API_KEY` to authenticate with Google's GenAI service.*
+
+4.  **Start the Development Server**
+    ```bash
+    npm start
+    # or
+    npm run dev
+    ```
+
+    Open [http://localhost:3000](http://localhost:3000) (or the port shown in your terminal) to view the app.
+
+---
+
+## 📂 Project Structure
+
+```
+├── src/
+│   ├── components/       # UI Components (Simulation, CodeViewer, Diagrams)
+│   ├── services/         # Gemini AI Service integration
+│   ├── constants.ts      # Compact code, Witness logic, and Simulation data
+│   ├── types.ts          # TypeScript interfaces for Identity/Simulation
+│   ├── App.tsx           # Main application layout
+│   └── index.tsx         # Entry point
+├── public/
+├── metadata.json         # Project metadata
+└── README.md             # Documentation
+```
+
+## 🔐 Security Note
+
+This is a **Simulation** and **Architectural Demo**.
+*   The keys used in the simulation (`passport.compact`, `witness.ts`) are for educational purposes.
+*   In a real production environment, `PrivateState` would be managed by the Midnight Lace wallet or a secure enclave, not React state.
+*   **Do not use the example private keys in a real mainnet application.**
+
+## 📜 License
+
+MIT
