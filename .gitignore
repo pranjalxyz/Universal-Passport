@@ -21,6 +21,7 @@ coverage
 # Midnight / Compact Network Artifacts
 # ---------------------------------
 # The 'compactc' compiler outputs (ZK-VM bytecode & keys)
+artifacts/
 build/
 target/
 pkg/

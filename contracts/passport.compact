@@ -1,0 +1,48 @@
+pragma language_version >=0.20.0;
+import CompactStandardLibrary;
+
+export struct PassportWitness {
+    user_age: Uint<64>,
+    expiry_timestamp: Uint<64>,
+    id_number: Bytes<32>,
+    secret_key: Bytes<32>,
+    issuer_signature: Bytes<64>
+}
+
+witness get_passport_data(): PassportWitness;
+
+witness check_issuer_signature(
+    data: Bytes<32>,
+    signature: Bytes<64>,
+    public_key: Bytes<32>
+): Boolean;
+
+export ledger verified_registry: Map<Bytes<32>, Boolean>;
+export ledger spent_nullifiers: Map<Bytes<32>, Boolean>;
+export ledger issuer_public_key: Bytes<32>;
+
+export circuit register(
+    caller: Bytes<32>,
+    required_age: Uint<64>,
+    current_network_time: Uint<64>
+): [] {
+    if (verified_registry.lookup(disclose(caller)) == true) {
+        return;
+    }
+    const witness_data = get_passport_data();
+    const data_packet = persistentHash<[Uint<64>, Uint<64>, Bytes<32>]>(
+        [witness_data.user_age, witness_data.expiry_timestamp, witness_data.id_number]
+    );
+    assert(
+        check_issuer_signature(data_packet, witness_data.issuer_signature, issuer_public_key),
+        "Invalid Issuer Signature"
+    );
+    const nullifier = persistentHash<Vector<2, Bytes<32>>>(
+        [witness_data.id_number, witness_data.secret_key]
+    );
+    assert(spent_nullifiers.lookup(disclose(nullifier)) == false, "Identity already registered");
+    assert(witness_data.user_age >= required_age, "Underage");
+    assert(witness_data.expiry_timestamp > current_network_time, "Expired");
+    spent_nullifiers.insert(disclose(nullifier), disclose(true));
+    verified_registry.insert(disclose(caller), disclose(true));
+}

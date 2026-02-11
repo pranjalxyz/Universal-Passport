@@ -27,7 +27,6 @@ Follow these instructions to run the project locally on your machine.
 
 *   **Node.js**: v18.0.0 or higher
 *   **npm** or **yarn**
-*   **Google Gemini API Key**: Required for the AI Architect chat feature. [Get an API Key here](https://aistudio.google.com/app/apikey).
 
 ### Installation
 
@@ -44,23 +43,7 @@ Follow these instructions to run the project locally on your machine.
     yarn install
     ```
 
-3.  **Environment Configuration**
-    Create a `.env` file in the root directory to store your API key.
-
-    ```bash
-    touch .env
-    ```
-
-    Open `.env` and add your key:
-    ```env
-    # Google Gemini API Key for the AI Architect Assistant
-    # Get yours at: https://aistudio.google.com/app/apikey
-    API_KEY=your_actual_api_key_here
-    ```
-
-    *Note: The application uses `process.env.API_KEY` to authenticate with Google's GenAI service.*
-
-4.  **Start the Development Server**
+3.  **Start the Development Server**
     ```bash
     npm start
     # or
