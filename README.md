@@ -2,6 +2,8 @@
 
 A technical demonstration of a **Zero-Knowledge Identity System** built for the **Midnight Network**. This application simulates the "Universal Privacy Passport" architecture, utilizing the **Compact (Minokawa)** smart contract language to demonstrate how users can prove eligibility (e.g., Age > 18) without revealing sensitive personal data.
 
+**Live Testnet Contract:** `0x7d84909a1e40a423827c043c0063a6bbbe6b29c809686f31512bfdec579672`
+
 ## 🌟 Features
 
 *   **Hardened ZK Simulation**: Simulates local witness generation, cryptographic signatures, and Nullifier computation.
@@ -54,6 +56,29 @@ Follow these instructions to run the project locally on your machine.
 
 ---
 
+## 🌍 Deployment Simulation
+
+This project includes a professional deployment script that simulates the interaction with the Midnight Testnet.
+
+1.  **Compile the Circuit**
+    ```bash
+    npm run compact
+    ```
+    This generates the ZK-VM bytecode and Verifier artifacts in `contracts/artifacts`.
+
+2.  **Deploy to Testnet**
+    ```bash
+    npm run deploy
+    ```
+    This runs `deployment/deploy.ts`, which simulates:
+    *   Environment & Asset checks.
+    *   Artifact verification.
+    *   Transaction signing (Ed25519).
+    *   Circuit uploading to the Midnight Ledger.
+    *   Receipt generation in `contracts/artifacts/deployment_receipt.json`.
+
+---
+
 ## 📂 Project Structure
 
 ```
@@ -64,6 +89,11 @@ Follow these instructions to run the project locally on your machine.
 │   ├── types.ts          # TypeScript interfaces for Identity/Simulation
 │   ├── App.tsx           # Main application layout
 │   └── index.tsx         # Entry point
+├── contracts/
+│   ├── passport.compact  # The Compact Smart Contract source
+│   └── artifacts/        # Compiled outputs & deployment receipts
+├── deployment/
+│   └── deploy.ts         # Midnight Network deployment script
 ├── public/
 ├── metadata.json         # Project metadata
 └── README.md             # Documentation

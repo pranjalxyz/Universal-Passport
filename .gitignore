@@ -21,6 +21,7 @@ coverage
 # Midnight / Compact Network Artifacts
 # ---------------------------------
 # The 'compactc' compiler outputs (ZK-VM bytecode & keys)
+deployment\deploy-debug.ts
 build/
 target/
 pkg/

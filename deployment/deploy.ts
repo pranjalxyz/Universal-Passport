@@ -100,10 +100,10 @@ const logger = pino({
 function getNetworkConfig(network: string): NetworkConfig {
   if (network === "local") {
     return {
-      indexer: "http://127.0.0.1:8088",
-      indexerWS: "ws://127.0.0.1:8088",
-      node: "http://127.0.0.1:9944",
-      proofServer: "http://127.0.0.1:6300",
+      indexer: "http://10.255.255.254:8088",
+      indexerWS: "ws://10.255.255.254:8088",
+      node: "http://10.255.255.254:9944",
+      proofServer: "http://10.255.255.254:6300",
     };
   } else {
     // testnet
