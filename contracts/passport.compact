@@ -19,7 +19,12 @@ witness check_issuer_signature(
 
 export ledger verified_registry: Map<Bytes<32>, Boolean>;
 export ledger spent_nullifiers: Map<Bytes<32>, Boolean>;
-export ledger issuer_public_key: Bytes<32>;
+export sealed ledger issuer_public_key: Bytes<32>;
+
+// ⭐ ADDED: Constructor to initialize the issuer's public key
+constructor(issuer_pk: Bytes<32>) {
+    issuer_public_key = disclose(issuer_pk);  // ✅ Explicitly public
+}
 
 export circuit register(
     caller: Bytes<32>,

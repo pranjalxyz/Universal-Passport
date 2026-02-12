@@ -1,0 +1,8 @@
+{
+  "version": 3,
+  "file": "index.js",
+  "sourceRoot": "../../../",
+  "sources": ["contracts/passport.compact", "compiler/standard-library.compact"],
+  "names": [],
+  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;EAwBA;;;;;;;;;;;;;;;;MAIA,AAAA,QAwBC;;;;;cAvBG,QAAiB;cACjB,cAAsB;cACtB,sBAA8B;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;yCAF9B,QAAiB,+BACjB,cAAsB,+BACtB,sBAA8B;;;;;;;;;0CAF9B,QAAiB;0CACjB,cAAsB;0CACtB,sBAA8B;;;OAqBjC;;;GA1BA;EAFD;;;;;UAAY,WAAoB;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;IALhC;;;;;;;;;;yEAAyD;IACzD;;;;;;;;;;yEAAwD;IACxD;;;;;;;;;yEAAkD;IAI9C;;;;;;;2HAA6B,WAAS;;yEAArB;;;;;;;GACpB;ECsBD,AAAA,kBAAiC;oEAAA;;;EAAjC,AAAA,kBAAiC;oEAAA;;;EDrCjC,AAAA,oBAA6C;;0DAA7C,iBAA6C;;;;;;;;;;;;;;GAAA;EAE7C,AAAA,yBAIW;;4BAHP,MAAe;4BACf,WAAoB;4BACpB,YAAqB;;;0DAHzB,sBAIW;iFAHP,MAAe;iFACf,WAAoB;iFACpB,YAAqB;;;;;;;;;;;;;;GACd;EAWX,AAAA,WAwBC;;cAvBG,QAAiB;cACjB,cAAsB;cACtB,sBAA8B;;gCAE1B;;;;;;;;;;;;;;2HAAkC,QAAM;;;qGAAvB;;;;;;YAGf,cAAkC;YAClC,aAEL,2BADI,cAAY;oDAAW,cAAY;oDAAmB,cAAY;;;6DAG5C,aAAW;6DAAE,cAAY;qFAAmB;;;;;;;;;;;0JAAiB;;YAGlF,WAEL,2BADI,cAAY;kDAAY,cAAY;sDAElC;;;;;;;;;;;;;;iJAAiC,WAAS;;;2HAA1B;;;;8BAChB,cAAY,aAAa,cAAY;;8BACrC,cAAY;;8BAAoB,sBAAoB;;MAC3D;;;;;;;;;;6HAAiC,WAAS;;;;;;0EAA1B;MAChB;;;;;;;;;;6HAAkC,QAAM;;;;;;0EAAvB;;;GACpB;;;;;;;;;;;;;;;;IAjCD;;;;;uCAAA;;;;;;;;;;;;;;;;4GAAyD;;;;;;uCAAzD;;;;;;;;;;;;4GAAyD;;;;;;;;;;;;;;uCAAzD;;;;;;;;;;;;;;;4GAAyD;;;;;;;;;;;;;;uCAAzD;;;;;;;;;;;;;;;;;4GAAyD;;;;;;;;;KAAA;IACzD;;;;;uCAAA;;;;;;;;;;;;;;;;4GAAwD;;;;;;uCAAxD;;;;;;;;;;;;4GAAwD;;;;;;;;;;;;;;uCAAxD;;;;;;;;;;;;;;;4GAAwD;;;;;;;;;;;;;;uCAAxD;;;;;;;;;;;;;;;;;4GAAwD;;;;;;;;;KAAA;IACxD;qCAAA;;;;;;;;;;;0GAAkD;KAAA;;;;;;;;;;;;;"
+}

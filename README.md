@@ -32,8 +32,8 @@ Follow these instructions to run the project locally on your machine.
 
 1.  **Clone the repository**
     ```bash
-    git clone https://github.com/your-username/midnight-passport-architect.git
-    cd midnight-passport-architect
+    git clone https://github.com/pranjalxyz/Universal-Passport.git
+    cd Universal-Passport
     ```
 
 2.  **Install dependencies**
