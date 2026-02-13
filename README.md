@@ -2,7 +2,7 @@
 
 A technical demonstration of a **Zero-Knowledge Identity System** built for the **Midnight Network**. This application simulates the "Universal Privacy Passport" architecture, utilizing the **Compact (Minokawa)** smart contract language to demonstrate how users can prove eligibility (e.g., Age > 18) without revealing sensitive personal data.
 
-**Live Testnet Contract:** `0x7d84909a1e40a423827c043c0063a6bbbe6b29c809686f31512bfdec579672`
+**Contract:** `0x7d84909a1e40a423827c043c0063a6bbbe6b29c809686f31512bfdec579672`
 
 ## 🌟 Features
 
