@@ -12,6 +12,17 @@ A technical demonstration of a **Zero-Knowledge Identity System** built for the 
 *   **Architecture Diagram**: Visual breakdown of the Trusted Issuer -> Witness -> Midnight Ledger flow.
 *   **AI Architect**: Integrated **Gemini 3 Pro** assistant to explain technical concepts in real-time.
 
+## 📸 Screenshots
+
+![Live Simulation Dashboard](./Screenshots/Live%20Simulation.png)
+*Real-time ZK Proof Generation & Verification Simulation*
+
+![Smart Contract Inspector](./Screenshots/Smart%20Contract.png)
+*Midnight Compact Smart Contract Viewer*
+
+![Witness Logic Provider](./Screenshots/Witness%20Logic.png)
+*Client-Side Witness Logic & Private State Management*
+
 ## 🛠️ Tech Stack
 
 *   **Frontend**: React 19, TypeScript, Tailwind CSS
