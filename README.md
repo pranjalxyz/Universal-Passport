@@ -79,7 +79,7 @@ This project includes a professional deployment script that simulates the intera
 
 2.  **Deploy to Testnet**
     ```bash
-    npm run deploy
+    npm run deploy:local
     ```
     This runs `deployment/deploy.ts`, which simulates:
     *   Environment & Asset checks.

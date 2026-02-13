@@ -20,7 +20,7 @@
     "build": "vite build",
     "preview": "vite preview",
     "compact": "compact compile ./contracts/passport.compact ./contracts/artifacts",
-    "deploy:local": "npx ts-node deployment/deploy-debug.ts"
+    "deploy:local": "npx ts-node deployment/deploy.ts"
   },
   "dependencies": {
     "@google/genai": "^1.40.0",
